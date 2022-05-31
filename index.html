@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <title>Microsoft Engage 2022</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+
+        google.charts.setOnLoadCallback(drawABChart);
+        google.charts.setOnLoadCallback(drawp1Chart);
+        google.charts.setOnLoadCallback(drawp2Chart);
+        google.charts.setOnLoadCallback(drawp3Chart);
+        google.charts.setOnLoadCallback(drawp4Chart);
+        google.charts.setOnLoadCallback(drawdispChart);
+
+
+        google.charts.setOnLoadCallback(drawABSChart);
+
+
+        function drawABChart() {
+
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T');
+            data.addColumn('number', 'S');
+            var data = google.visualization.arrayToDataTable([
+                ['Body type', 'Car Sold'],
+                ['SUV', 126],
+                ['Hatchback', 117],
+                ['Sedan', 113],
+                ['MPV', 16],
+                ['Crossover', 2],
+                ['Sports', 1],
+
+
+            ]);
+
+
+            var options = {
+                title: 'Body Type Preference',
+                width: 400,
+                height: 300
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('AB_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawp1Chart() {
+
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T2');
+            data.addColumn('number', 'Car sold');
+            data.addRows([
+                ['Hatchback', 117],
+                ['SUV', 103],
+                ['Sedan', 89],
+                ['MPV', 16],
+                ['Crossover', 2]
+
+            ]);
+
+
+            var options = {
+                title: 'Price preference',
+                width: 525,
+                height: 300
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('p1_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawp2Chart() {
+
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T2');
+            data.addColumn('number', 'Car sold');
+            data.addRows([
+                ['SUV', 19],
+                ['Sedan', 14],
+                ['Coupe', 3],
+                ['Convertible', 1],
+                ['Sports', 1]
+
+            ]);
+
+
+            var options = {
+                title: 'Price preference',
+                width: 525,
+                height: 300
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('p2_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawp3Chart() {
+
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T2');
+            data.addColumn('number', 'Car sold');
+            data.addRows([
+                ['Sedan', 7],
+                ['Coupe', 6],
+                ['SUV', 4],
+                ['Convertible', 2]
+
+            ]);
+
+            var options = {
+                title: 'Price preference',
+                width: 525,
+                height: 300
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('p3_chart_div'));
+            chart.draw(data, options);
+        }
+        function drawp4Chart() {
+
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T2');
+            data.addColumn('number', 'Car sold');
+            data.addRows([
+                ['Sedan', 3],
+                ['Convertible', 2],
+                ['Coupe', 1],
+                
+
+            ]);
+
+            var options = {
+                title: 'Price preference',
+                width: 525,
+                height: 300
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('p4_chart_div'));
+            chart.draw(data, options);
+        }
+        function drawdispChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T2');
+            data.addColumn('number', 'Car sold');
+            data.addRows([
+                ['998cc', 21],
+                ['796cc', 4],
+                ['799cc', 4],
+                ['999cc', 3],
+                ['6752cc', 1]
+
+            ]);
+
+
+            var options = {
+                title: 'Engine displacement preference',
+                width: 500,
+                height: 300
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('disp_chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<!-- body -->
+<body>
+
+    <div class="header_top">
+        <div class="car">
+            <img class="Logo" src="images\microsoft.jpeg" alt="microsoft logo">
+            <div><a href="index.html"><p class="Car"><font size="100">CarParticulars</font></p></a></div>
+        </div>
+    </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav navCustom">
+                <a class="nav-item nav-link" href="index.html">HOME</a>
+                <a class="nav-item nav-link" href="safety.html">SAFETY</a>
+                <a class="nav-item nav-link" href="specs.html">SPECS</a>
+            </div>
+        </div>
+    </nav>
+    <div class="about_section layout_padding">
+        <div class="container">
+            <div class="row">
+                
+                    <center>
+
+                        <h1 class="years_text">About this Website</h1>
+                        <p class="ipsum_text">In this website, I have used dataset available on the Microsoft website to perform data analytics and find the best sales record
+                        of vehicles, the best category of vehicle, the best specs of a vehicle which results in most sales and the prominance on the safety feature. I have used PowerBI to 
+                        perform the analytics and then the data was transfered to this website in the form of interactive. Scrolling over the graphs will
+                        present you with more information about certain aspects on the graph. The home page (below) consists of all the basic information of the type of vehicles sold.
+                        This gives the most in general information about the sales record of different vehicles. For other information such as Safety and Specs of vehicles, we can use the navigation
+                        bar (above) the give us other important information such as how important is the availability of airbags is to the buyer and how important is having "5 seats" are to buyers.
+                        All this information can help the manufacturer in producing a car that meets the market demands.</p>
+
+                </div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!-- header section start -->
+    <div class="about_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h1 class="years_text">Car Body type Preference</h1>
+
+                    <p class="ipsum_text">
+                        The bar chart to the right shows the top 5 vehicle type sold in descening order. We can clearly see that SUV are the most sold vehicle followerd
+                        closely by hatchbacks and sedan. Crossovers and MPV (multi purpose vehicle) are the not actively prefered by people for purchase. There is not a staggering
+                        difference between the top 3 vehicle body types so the companies can priorities either of the three for maximum sales.
+                    </p>
+
+                </div>
+                <div class="col-md-6">
+
+
+                    <tr>
+                        <td>
+                            <div id="AB_chart_div" style="border: 1px solid #ccc">
+                            </div>
+                        </td>
+
+
+                    </tr>
+                    <div id="chart_div"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner_section">
+        <section class="slide-wrapper">
+            <div class="container">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+
+                    <h1 style="color:white; justify-content: center;"><b><center>Car by price range</center></h1></b>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <tr>
+                                            <td class="Td"><div id="p1_chart_div" style=" border: 1px solid #ccc"></div></td>
+
+
+                                        </tr>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <h1 class="achive_text">₹2,79,650-₹50,00,000</h1>
+
+                                        <p class="lorem_text">
+                                            All the hatchbacks lie in this segment and thus the most car sold in this price segment are Hatchbacks
+                                            followed closely by SUVs and sedans. Most of the non-luxury vehicle type lie in this segment.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <tr>
+                                            <td><div id="p2_chart_div" style="border: 1px solid #ccc"></div></td>
+
+
+                                        </tr>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="achive_text">₹50,00,000-₹2,00,00,000</h1>
+
+                                        <p class="lorem_text">
+                                            SUVs dominate this price segment followrd closely by sedans. This price range notices the entry of three different
+                                            types of vehicle, Coupe, convertible and sports although the no. of sales in this segements are very low suggesting that people in this
+                                            price range still prefer an all puropse vehicle such as a sedan or SUV.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <tr>
+                                            <td><div id="p3_chart_div" style="border: 2px solid #ccc"></div></td>
+
+
+                                        </tr>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="achive_text">₹2,00,00,000-₹5,00,00,000</h1>
+
+                                        <p class="lorem_text">
+                                            A very less no. of vehicles are sold in this segment. The most sold vehicle type is sedan in this section but the
+                                            no. of sales are so less that it does not give any big revealation.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <tr>
+                                            <td><div id="p4_chart_div" style="border: 1px solid #ccc"></div></td>
+
+
+                                        </tr>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="achive_text">₹5,00,00,000-₹9,50,00,000</h1>
+
+                                        <p class="lorem_text">
+                                            Sedans dominate this price segement and by quite alot. Sedans are sold in every price segment, so it gives us the information that
+                                            if a company needs to hit it's sale numbers and more, sedans should be the goto vehicle type.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- banner section end -->
+    <!-- about section start -->
+    <div class="about_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h1 class="years_text">Engine Displacement Preference</h1>
+                    <p class="ipsum_text">
+                        Although information like engine displacement value are too specific, we can clearly see that most of the vehicle sold are either between 900-999cc
+                        or below 999cc. And the next highest number is 6752cc. Which means barring few category of people, most vehicle need not be too powerful to be sold to the masses.
+                    </p>
+
+                </div>
+                <div class="col-md-6">
+                    <tr>
+                        <td><div id="disp_chart_div" style="border: 1px solid #ccc"></div></td>
+
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="join_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        $('#myCarousel').carousel({
+            interval: false
+        });
+
+        //scroll slides on swipe for touch enabled devices
+
+        $("#myCarousel").on("touchstart", function (event) {
+
+            var yClick = event.originalEvent.touches[0].pageY;
+            $(this).one("touchmove", function (event) {
+
+                var yMove = event.originalEvent.touches[0].pageY;
+                if (Math.floor(yClick - yMove) > 1) {
+                    $(".carousel").carousel('next');
+                }
+                else if (Math.floor(yClick - yMove) < -1) {
+                    $(".carousel").carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend", function () {
+                $(this).off("touchmove");
+            });
+        });
+    </script>
+
+</body>
+</html>
