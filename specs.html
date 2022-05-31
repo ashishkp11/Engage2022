@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Microsft Engage 2022</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+
+        google.charts.setOnLoadCallback(drawdriveChart);
+
+
+        google.charts.setOnLoadCallback(drawFuelChart);
+        google.charts.setOnLoadCallback(drawEMSChart);
+        google.charts.setOnLoadCallback(drawSEATChart);
+        google.charts.setOnLoadCallback(drawTMSChart);
+
+        
+        function drawdriveChart() {
+
+         
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T');
+            data.addColumn('number', 'S');
+            var data = google.visualization.arrayToDataTable([
+                ['Drivetrain', 'Car Sold'],
+                ['FWD', 282],
+                ['RWD', 54],
+                ['AWD', 37],
+                ['4WD', 22]
+
+            ]);
+
+         
+            var options = {
+                title: 'Drive Train Preference',
+                width: 400,
+                height: 300
+            };
+
+        
+            var chart = new google.visualization.BarChart(document.getElementById('drive_chart_div'));
+            chart.draw(data, options);
+        }
+
+    
+        function drawFuelChart() {
+
+            
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T2');
+            data.addColumn('number', 'Car sold');
+            data.addRows([
+                ['Diesel', 203],
+                ['Petrol', 190],
+                ['Hybrid', 2]
+            ]);
+
+    
+            var options = {
+                title: 'Fuel type preference',
+                width: 400,
+                height: 300
+            };
+
+           
+            var chart = new google.visualization.BarChart(document.getElementById('Fuel_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawEMSChart() {
+
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T');
+            data.addColumn('number', 'Car sold');
+            var data = google.visualization.arrayToDataTable([
+                ['EMS', 'Car Sold'],
+                ['BS IV', 282],
+                ['BS VI', 54],
+                ['BS III', 37]
+
+            ]);
+
+           
+            var options = {
+                title: 'EMS Preference',
+                width: 400,
+                height: 300
+            };
+
+            
+            var chart = new google.visualization.BarChart(document.getElementById('EMS_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawSEATChart() {
+
+           
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T');
+            data.addColumn('number', 'S');
+            var data = google.visualization.arrayToDataTable([
+                ['No. of seats', 'Car Sold'],
+                ['5', 267],
+                ['7', 69],
+                ['4', 24],
+                ['6', 15],
+                ['9', 9],
+                ['2', 7],
+                ['8', 4]
+
+            ]);
+
+            
+            var options = {
+                title: 'No. of seat Preference',
+                width: 400,
+                height: 300
+            };
+
+        
+            var chart = new google.visualization.BarChart(document.getElementById('SEAT_chart_div'));
+            chart.draw(data, options);
+        }
+        function drawTMSChart() {
+
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'T');
+            data.addColumn('number', 'S');
+            var data = google.visualization.arrayToDataTable([
+                ['Transmission Type', 'Car Sold'],
+                ['Manual', 242],
+                ['Automatic', 132],
+                ['AMT', 6],
+                ['CVT', 1]
+
+            ]);
+
+
+            var options = {
+                title: 'Transmission Type Preference',
+                width: 400,
+                height: 300
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('TMS_chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+    <!-- body -->
+    <body>
+
+        <div class="header_top">
+            <div class="car">
+                <img class="Logo" src="images\microsoft.jpeg" alt="microsoft logo">
+                <div><a href="index.html"><p class="Car"><font size="100">CarParticulars</font></p></a></div>
+            </div>
+        </div>
+        </div>
+        <!-- header top section end -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav navCustom">
+                    <a class="nav-item nav-link" href="index.html">HOME</a>
+                    <a class="nav-item nav-link" href="safety.html">SAFETY</a>
+                    <a class="nav-item nav-link" href="specs.html">SPECS</a>
+                </div>
+            </div>
+        </nav>
+        <!-- header section start -->
+        <div class="about_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h1 class="years_text">Car drivetrain Preference</h1>
+
+                        <p class="ipsum_text">
+                            Forward wheel drive (FWD) is the most sold vehicle drivetrain type. And the gap between FWD and rest of the drivetrain type
+                            is massive even though alot of SUVs are sold meaning people prefer FWD or they do not priorities having AWD,RWD or 4WD. For companies, not investing in
+                            drivetrains other than FWD could be beneficial as the rest of them are not sold as much.
+                        </p>
+
+                    </div>
+                    <div class="col-md-6">
+                        <tr>
+                            <td><div id="drive_chart_div" style="border: 1px solid #ccc"></div></td>
+
+
+                        </tr>
+
+                        <div id="chart_div"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- discount section end -->
+        <!-- header section start -->
+
+        <div class="about_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h1 class="years_text">Car Fuel type Preference</h1>
+
+                        <p class="ipsum_text">
+                            Even though going hybrid is the better option, stats show that people are not yet ready to shift to a different fuel type other than their
+                            traditional Diesel and petrol. Most of the car sold have either a petrol engine or a diesel engine with the later being the most sold one.
+                        </p>
+
+                    </div>
+                    <div class="col-md-6">
+                        <tr>
+                            <td><div id="Fuel_chart_div" style="border: 1px solid #ccc"></div></td>
+
+                        </tr>
+
+                        <div id="chart_div"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- client section end -->
+        <!-- header section start -->
+
+        <div class="about_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h1 class="years_text">Car EMS Preference</h1>
+
+                        <p class="ipsum_text">
+                            Most cars sold have BS IV emmission rating which might not be the best and hence clearly shows that buyers do not look
+                            at this much while purchasing their vehicle. From a business point of few, just having BS IV rating in the vehicle should be enough for hitting
+                            proper sales numbers..
+                        </p>
+
+                    </div>
+                    <div class="col-md-6">
+                        <tr>
+                            <td><div id="EMS_chart_div" style="border: 1px solid #ccc"></div></td>
+
+                        </tr>
+
+                        <div id="chart_div"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header section start -->
+        <div class="about_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h1 class="years_text">Transmission type Preference</h1>
+
+                        <p class="ipsum_text">
+                            Manual vehicles dominate the market. They are followed by automatic vehicles, which although have a very less sales number in camparision to 
+                            the manual one, still put up a good numbers. Car manufacturers should avoid AMT and CVT type because they barely get sold.
+                        </p>
+
+                    </div>
+                    <div class="col-md-6">
+                        <tr>
+                            <td><div id="TMS_chart_div" style="border: 1px solid #ccc"></div></td>
+
+                        </tr>
+
+                        <div id="chart_div"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h1 class="years_text">Number of seats</h1>
+
+                        <p class="ipsum_text">
+                            Most of the cars sold were hatchbacks,sedans and SUVs so it is not a surprise to notice that most of the vehicle sold have
+                            5-7 seats. Car companies that have famillies in focus sell the most cars. Hence cars with more seats hit the sales number far easier than any other car.
+                            For more sales focus, 5-7 seater cars should be the primary focus.
+                        </p>
+
+                    </div>
+                    <div class="col-md-6">
+                        <tr>
+                            <td><div id="SEAT_chart_div" style="border: 1px solid #ccc"></div></td>
+
+                        </tr>
+
+                        <div id="chart_div"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- client section end -->
+        <!-- client section end -->
+        <!-- join us section start -->
+        <div class="join_section margin_top_0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- join us section end -->
+        <!-- Javascript files-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/plugin.js"></script>
+        <!-- sidebar -->
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/custom.js"></script>
+        <!-- javascript -->
+        <script src="js/owl.carousel.js"></script>
+        <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+        <script>
+            $('#myCarousel').carousel({
+                interval: false
+            });
+
+            //scroll slides on swipe for touch enabled devices
+
+            $("#myCarousel").on("touchstart", function (event) {
+
+                var yClick = event.originalEvent.touches[0].pageY;
+                $(this).one("touchmove", function (event) {
+
+                    var yMove = event.originalEvent.touches[0].pageY;
+                    if (Math.floor(yClick - yMove) > 1) {
+                        $(".carousel").carousel('next');
+                    }
+                    else if (Math.floor(yClick - yMove) < -1) {
+                        $(".carousel").carousel('prev');
+                    }
+                });
+                $(".carousel").on("touchend", function () {
+                    $(this).off("touchmove");
+                });
+            });
+        </script>
+    </body>
+</html>
